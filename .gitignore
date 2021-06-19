@@ -1,2 +1,6 @@
 log.txt
 bytecode.rpyb
+
+
+game/saves/*
+game/cache/*
