@@ -13,9 +13,26 @@ image dicohappy = "Dico2.png"
 image dicosalute = "Dico3.png"
 image dicogun = "Dico5.png"
 image diconormal = "Dico4.png"
+image cloudnormal = "Cloud1.png"
+image cloudeyesclosed = "Cloud2.png"
+image cloudhappy = "Cloud4.png"
+image cloudangry = "Cloud3 (2).png"
+image cloudcry = "Cloud5.png"
+image bg art = "bg art.png"
+image crochappy = "Croc1.png"
+image crocsad = "Croc2.png"
+image crocmad = "Croc3.png"
+image croctalk = "Croc4.png"
+image crocnormal = "Croc5.png"
+image bg gen2 = "bg gen2.png"
+image dubangry = "Dub1.png"
+image dubsmug = "Dub2.png"
+image dubtalk1 = "Dub3.png"
+image dubangry = "Dub5.png"
+image dubsmile = "Dub6.png"
+image dubmeh = "Dub7.png"
 
-
-
+default trollars = True
 default menuset = set()
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -33,7 +50,10 @@ define Cloud = Character("Cloud",
 define Dico = Character("Dico",
                     who_color="#7D00FF", callback = callback)
 
+define config.main_menu_music = "af5v.mp3"
 
+define Crocidy = Character("Crocidy",
+                    who_color="#900C3F", callback = callback)
 
 
 
@@ -53,6 +73,8 @@ return
 
 
 label start:
+    $ trollars = 0
+    $ items = []
     play music "EIETqr1JNJdu.128.mp3" fadein 2.0
     "Long, Long ago. In a place far away. There was a place called Twitter..."
     "Twitter was a land full of an adventurous bunch, from all over the world."
@@ -102,11 +124,56 @@ python:
     if not name:
         name = "Crin"
 
-show laysmile
+if name == "rnexus":
+    Lay "Lol stupid!!111"
 
-Lay "Nice to meet ya [name]!"
-# bro
-show laynormal
+if name == "agata":
+    show layangry
+    Lay "We are going to turn you into a smoothie. :D"
+    return
+
+if name == "jfify":
+    show layangry
+    Lay "Go suicide bait some where else you git."
+    return
+
+if name == "cary":
+    Lay "wtf cary!?!?!?!?!???!!!!"
+
+if name == "Crin":
+    Lay "Oh hi crin :)"
+
+if name == "Average":
+    show laysmile
+    Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
+
+if name == "Gerno":
+    Lay "Gerno stop playing KSP 24/7"
+
+if name == "schloob":
+    Lay "schloob"
+
+if name == "Dream":
+    python:
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        except: pass
+      
+    return
+
+
+
+
+
+else:
+
+
+
+
+    show laysmile
+
+    Lay "Nice to meet ya [name]!"
+    # bro
+    show laynormal
 Lay "Wait a minute... How did you get here?"
 
 menu:
@@ -227,24 +294,42 @@ scene black
 
 "As you walk in #general, you can hear yelling, and what appears to be two people having an argument."
 "You then see a mysterious purple figure throwing stupid pictures on what seems to be a poker table... that nobodys even playing poker on."
+show dubsmug at right 
 Dubya "I love women."
+show cloudnormal at left 
 Cloud "I hate women."
+show dubangry at right
 Dubya "I LOVE women."
+show cloudangry at left 
 Cloud "Well, I HATE women."
+
 Dubya "Your opinion won't make me want to not love women."
 Cloud "It should, because I hate women!"
+hide dubangry
+hide cloudangry
+hide dubsmug
+hide cloudnormal
 "You spot the commotion and go join in with Lay."
+show cloudnormal
 Cloud "New face around here eh?"
+show cloudhappy
 Cloud "Name's Cloud. Guy I was talkin' to's Dubya"
+hide cloudhappy
+hide cloudnormal
+show dubsmug
 Dubya "I love women."
+hide dubsmug
+show cloudeyesclosed
 Cloud "Hngh, he's getting on my nerves. Hey [name], whose opinion do you think is better?"
 
 
 menu:
     set menuset
     "What clan are you willing to join?"
+    
 
     "I love women.":
+        hide cloudeyesclosed
         show laytalk
         Lay "Haha, sorry about this but you're not allowed to choose a clan without getting{color=#ACE599} verified{/color} yet. "
         show laysmile
@@ -252,6 +337,7 @@ menu:
         hide laysmile
 
     "I hate women.":
+        hide cloudeyesclosed
         show laytalk
         Lay "Haha, sorry about this but you're not allowed to choose a clan without getting {color=#ACE599} verified{/color} yet. "
         show laysmile
@@ -261,6 +347,7 @@ menu:
 hide laysmile
 hide laytalk
 
+show dubangry 
 Dubya "Well, that doesn’t matter because I love women!"
 Cloud "grr.. I HATE WOMEN!"
 "This goes on for another 10 minutes,"
@@ -303,11 +390,20 @@ Dubya "I LOVE WOMEN."
 
 show dicoangry
 Dico "I’ll go deal with them."
-Dico "The only way it could get worse is if marcel was here,"
+
+if name == "Marcel":
+    Dico "I hate [name]"
+
+else:
+
+
+    Dico "The only way it could get worse is if marcel was here,"
+
 Dico "and he’s probably playing some furry game or something right now."
 show dicohappy
 Dico "Oh, sorry, i’m rambling again, I’ll go deal with them, see ya!"
 hide dicohappy
+hide dicoangry
 show layeyesclosed at center with dissolve
 Lay "Hey, how about we head to the shop? I'm starving."
 
@@ -340,6 +436,7 @@ return
 
 label general2:
 stop music fadeout 1.0
+play music "bitch.mp3" fadein 1.5
 scene black
 "As you and Lay walked through the busingling city, you wonder to your self, What is General-2?"
 "The city was abnormal. Every where you looked, a different scene was going on."
@@ -351,21 +448,105 @@ scene black
 
 show laynormal
 Lay "We're here!"
-"update over"
+show bg gen2 with dissolve
+hide laynormal
+show laytalk
+Lay "This is where everyone one in the town goes when General1 is locked..."
+
+menu:
+
+    set menuset
+    "Why is General1 locked?":
+        show layeyesclosed
+        Lay " {color=#ACE599}Riots...{/color}"
+        Lay "lots and lots of riots."
+        Lay "They always get angry so we have to shut everything down to make sure no one gets hurt..."
+    
+    "Why is it so empty right now?":
+        show layeyesclosed
+        Lay "We havent had a contraversy in a while..."
+
+show laycry
+Lay "Come on lets go.."
+Lay "This place makes me more than sad."
+jump verfi
+
+
+
+
 
 return
 
 
 label art:
 stop music fadeout 1.0
-scene black
-"hello"
+scene bg art with dissolve 
+"Lay stops you."
+show laysmile
+Lay "I love this place! It's where all the artist live."
+Lay "Look! There's one over there!!"
+hide laysmile
+show laytalk at right with easeinright
+show crocnormal at left with easeinleft
+Crocidy "Yo!"
+hide laytalk
+show laysmile at right
+Lay "Hi, Crocidy!"
+Lay "Long time no see!"
+hide crocnormal
+show crochappy at left
+Crocidy "Yeah, it's been a while!"
+hide crochappy
+show croctalk at left 
+Crocidy "Who's this?"
+hide laysmile
+show laytalk at right
+
+Lay "Oh this is [name]!"
+Crocidy "OH SHIT! Welcome!"
+show crocnormal at left
+Crocidy "Although currently the art depo is busy so we have limited visits today. Maybe come back later! :)"
+show layeyesclosed at right
+Lay "Ah, that sucks. Welp lets get going [name]."
+Lay "See ya croc!"
+
+hide crocmad
+hide layeyesclosed
+"You and Lay get going, making your way to General2."
+
+jump general2
 return
 
 label shop:
+scene black 
+hide laysmile
+hide layeyesclosed
+hide dicoangry
+
 stop music fadeout 1.0
-"helo"
-"update do be over doe"
+play music "lstanberg_shop.mp3" fadein 1.0 fadeout 1.0
+
+"You and Lay start walking over to the market place, a certain place outshining the rest."
+
+show laynormal with dissolve
+Lay "You're probably hungry too, let me see if I have any spare cash."
+"Lay digs through her pockets, looking for spare change."
+show laysmile
+Lay "Here we go. 20 {color=#ACE599}trollars{/color}!"
+$ trollars += 20
+"{color=#ACE599}You've just recieved 20 trollars!{/color}"
+
+
+jump art 
+
+label verfi:
+stop music fadeout 1.5
+scene black 
+"death"
+
+
+
+
 
 
 

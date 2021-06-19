@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 329: expected menuitem
+    hide cloud
+    ^
+
+Ren'Py Version: Ren'Py 7.4.5.1648
+Sat Jun 19 18:38:10 2021
