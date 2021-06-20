@@ -31,6 +31,7 @@ image dubtalk1 = "Dub3.png"
 image dubangry = "Dub5.png"
 image dubsmile = "Dub6.png"
 image dubmeh = "Dub7.png"
+image bg pol = "bg pol.png"
 
 default trollars = True
 default menuset = set()
@@ -134,14 +135,14 @@ if name == "Rnexus":
 if name == "agata":
     show layangry
     Lay "We are going to turn you into a smoothie. :D"
-    return
+    $ renpy.quit()
 
 
 
 if name == "Agata":
     show layangry
     Lay "We are going to turn you into a smoothie. :D"
-    return
+    $ renpy.quit()
 
 
 
@@ -149,36 +150,65 @@ if name == "Agata":
 if name == "Jfify":
     show layangry
     Lay "Go suicide bait some where else you git."
-    return
+    $ renpy.quit()
 
 if name == "jfify":
     show layangry
     Lay "Go suicide bait some where else you git."
-    return
-
+    $ renpy.quit()
 
 if name == "cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
 
+if name == "Cary":
+    Lay "wtf cary!?!?!?!?!???!!!!"
+
+
 if name == "Crin":
+    Lay "Oh hi crin :)"
+
+
+if name == "crin":
     Lay "Oh hi crin :)"
 
 if name == "Average":
     show laysmile
     Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
 
+
+if name == "average":
+    show laysmile
+    Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
+
 if name == "Gerno":
     Lay "Gerno stop playing KSP 24/7"
 
+
+if name == "gerno":
+    Lay "Gerno stop playing KSP 24/7"
+
+
 if name == "schloob":
     Lay "schloob"
+
+if name == "Kosma":
+    $ renpy.quit()
+
+if name == "Texas": 
+    $ renpy.quit()
+
 
 if name == "Dream":
     python:
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
       
-    return
+    $ renpy.quit()
+
+
+if name == "Gogy":
+    $ renpy.quit()
+
 
 else:
 
@@ -362,7 +392,10 @@ hide laytalk
 
 show dubangry 
 Dubya "Well, that doesn’t matter because I love women!"
+show cloudangry at left with moveinleft 
 Cloud "grr.. I HATE WOMEN!"
+hide cloudangry
+hide dubangry
 "This goes on for another 10 minutes,"
 with vpunch
 "Until another man walks into the room and slams on the poker table, splattering the chips everywhere."
@@ -370,8 +403,12 @@ show dicoangry with dissolve
 Dico "SHUT THE FUCK UP, YOU TWO!"
 Dico "WE DON'T CARE ABOUT WOMEN!"
 hide dicoangry
+show cloudeyesclosed
 Cloud "Well, it’s not MY fault that DUBYA loves women!!"
+hide cloudeyesclosed
+show dubtalk1
 Dubya "Well, it’s not MY-"
+hide dubtalk1 
 show dicoangry
 Dico " I said SHUT UP ABOUT WOMEN!"
 hide dicoangry
@@ -398,8 +435,13 @@ Lay "Yeah, I’ll take it from here, just make sure those 2 stop fucking arguing
 hide dicohappy
 hide layeyesclosed
 
+show cloudangry at left
 Cloud "I HATE WOMEN."
+show dubangry at right
 Dubya "I LOVE WOMEN."
+
+hide cloudangry
+hide dubangry
 
 show dicoangry
 Dico "I’ll go deal with them."
@@ -411,8 +453,9 @@ else:
 
 
     Dico "The only way it could get worse is if marcel was here,"
+    Dico "and he’s probably playing some furry game or something right now."
 
-Dico "and he’s probably playing some furry game or something right now."
+
 show dicohappy
 Dico "Oh, sorry, i’m rambling again, I’ll go deal with them, see ya!"
 hide dicohappy
@@ -550,12 +593,29 @@ $ trollars += 20
 "{color=#ACE599}You've just recieved 20 trollars!{/color}"
 
 
+
+
 jump art 
 
 label verfi:
 stop music fadeout 1.5
 scene black 
-"death"
+"Lay grabs your hand and starts walking to a destination unbeknownst to you."
+"You try asking her where u are going but she doesn't answer..."
+"Finally she stops you, infront of you seemed to be a police station."
+"Before you can say something, she starts talking."
+show layeyesclosed
+Lay "We have to do this."
+show laycry
+Lay "I'm sorry."
+
+hide layeyesclosed
+hide laycry
+
+"She grabs your hand once more and you both step inside the police station"
+scene bg pol 
+with dissolve
+""
 
 
 
