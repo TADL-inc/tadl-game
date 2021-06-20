@@ -122,9 +122,13 @@ python:
     name = name.strip()
 
     if not name:
-        name = "Crin"
+        name = "Dumbass"
 
 if name == "rnexus":
+    Lay "Lol stupid!!111"
+
+
+if name == "Rnexus":
     Lay "Lol stupid!!111"
 
 if name == "agata":
@@ -132,10 +136,26 @@ if name == "agata":
     Lay "We are going to turn you into a smoothie. :D"
     return
 
+
+
+if name == "Agata":
+    show layangry
+    Lay "We are going to turn you into a smoothie. :D"
+    return
+
+
+
+
+if name == "Jfify":
+    show layangry
+    Lay "Go suicide bait some where else you git."
+    return
+
 if name == "jfify":
     show layangry
     Lay "Go suicide bait some where else you git."
     return
+
 
 if name == "cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
@@ -160,14 +180,7 @@ if name == "Dream":
       
     return
 
-
-
-
-
 else:
-
-
-
 
     show laysmile
 
