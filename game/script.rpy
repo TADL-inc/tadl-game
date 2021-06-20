@@ -162,6 +162,7 @@ if name == "cary":
 
 if name == "Cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
+    Lay "Adobe Flash CS6 Cracked Free 2020 Google Drive.rar"
 
 
 if name == "Crin":
@@ -203,6 +204,7 @@ if name == "Dream":
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
       
+    
     $ renpy.quit()
 
 

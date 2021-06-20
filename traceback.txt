@@ -1,28 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 201, in script
-    python:
-  File "renpy/common/00start.rpy", line 276, in <module>
-    renpy.call_in_new_context(_restart[2])
-JumpException: LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.
+  File "renpy/common/00start.rpy", line 213, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 498, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 498, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 508, in _execute_python_hide
+    renpy.load("_reload-2")
+RestartContext: LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 201, in script
-    python:
+  File "renpy/execution.py", line 922, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 213, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 498, in script
+    python hide:
   File "renpy/ast.py", line 922, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "renpy/python.py", line 2218, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 276, in <module>
-    renpy.call_in_new_context(_restart[2])
-  File "renpy/game.py", line 349, in call_in_new_context
-    raise renpy.game.JumpException(e.args[0])
-JumpException: LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.
+  File "renpy/common/00keymap.rpy", line 498, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 508, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "renpy/loadsave.py", line 769, in load
+    log.unfreeze(roots, label="_after_load")
+  File "renpy/python.py", line 2173, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "renpy/python.py", line 2104, in rollback
+    raise renpy.game.RestartContext()
+RestartContext: LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.5.1648
 The Average Day in L'stanberg 1.0
-Sun Jun 20 09:49:40 2021
+Sun Jun 20 18:18:50 2021
