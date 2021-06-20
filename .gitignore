@@ -1,6 +1,7 @@
 log.txt
 bytecode.rpyb
 errors.txt
+traceback.txt
 
 game/saves/*
 game/cache/*
