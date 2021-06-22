@@ -6,6 +6,7 @@ image layangry = "Lay3.png"
 image layeyesclosed = "Lay4.png"
 image laycry = "Lay5.png"
 image laysmile = "Lay6.png"
+image layblush = "Lay7.png"
 image flower1 = "flower1.png"
 image splashscreen = "splash.png"
 image dicoangry = "Dico1.png"
@@ -32,6 +33,13 @@ image dubangry = "Dub5.png"
 image dubsmile = "Dub6.png"
 image dubmeh = "Dub7.png"
 image bg pol = "bg pol.png"
+image crinnorm = "Crin1.png"
+image crintalk = "Crin2.png"
+image crinhappy = "Crin3.png"
+image crinmad = "Crin4.png"
+image crincry = "Crin5.png"
+image crinangry = "Crin6.png"
+image crinhuh = "Crin7.png"
 
 default trollars = True
 default menuset = set()
@@ -56,8 +64,19 @@ define config.main_menu_music = "af5v.mp3"
 define Crocidy = Character("Crocidy",
                     who_color="#900C3F", callback = callback)
 
+define Crin = Character("Crin",
+                    who_color="#ADDDF3", callback = callback)
+
+define Sour = Character("Sour",
+                    who_color="#99E09F", callback = callback)
 
 
+
+define Average = Character("Average",
+                    who_color="#ACE599", callback = callback)
+
+define FBI = Character("FBI",
+                    who_color="#99E09F", callback = callback)
 
 
 
@@ -66,8 +85,10 @@ label splashscreen:
 with Pause (1)
 
 show splashscreen with dissolve
-
 with Pause(2)
+hide splashscreen with dissolve 
+
+
 
 
 return
@@ -159,6 +180,7 @@ if name == "jfify":
 
 if name == "cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
+    Lay "Adobe Flash CS6 Cracked Free 2020 Google Drive.rar"
 
 if name == "Cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
@@ -201,7 +223,7 @@ if name == "Texas":
 
 if name == "Dream":
     python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
       
     
@@ -209,7 +231,15 @@ if name == "Dream":
 
 if name == "dream":
     python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behid 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        except: pass
+      
+    
+    $ renpy.quit()
+
+if name == "Dreamwastaken":
+    python:
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
       
     
@@ -223,7 +253,16 @@ if name == "Gogy":
 if name == "gogy":
     $ renpy.quit()
 
+if name == "CD":
+    Lay "Cracker balls"
+    $ renpy.quit()
 
+if name == "cd":
+    Lay "Cracker dick"
+    $ renpy.quit()
+
+if name == "Cloud":
+    Lay "I hate women."
 
 
 
@@ -409,7 +448,7 @@ hide laytalk
 
 show dubangry 
 Dubya "Well, that doesn’t matter because I love women!"
-show cloudangry at left with moveinleft 
+show cloudangry at left with easeinleft 
 Cloud "grr.. I HATE WOMEN!"
 hide cloudangry
 hide dubangry
@@ -632,7 +671,60 @@ hide laycry
 "She grabs your hand once more and you both step inside the police station"
 scene bg pol 
 with dissolve
-""
+"You see someone telling some jokes to what it seems the inamtes of this police station."
+show crinhappy
+Crin "And then I said,"
+Crin "Sussy Bal-"
+hide crinhappy
+"sour and fbi laughs (placeholder)"
+show crinhappy
+Crin "Oh Hi Lay!"
+hide crinhappy
+show crinhuh
+Crin "Who the fuck is this??"
+show laysmile at right with easeinright
+Lay "This guy? He's new around here."
+hide crinhuh
+show crinnorm
+show laynormal at right
+Crin "Oohhh.. well what's this lad doing here then?"
+hide laynormal at right 
+hide laysmile at right
+show layeyesclosed at right
+Lay "I'm gonna verify them to make them an official member."
+show crintalk
+Crin "Right then, bring him to the desk."
+hide crintalk
+hide layeyesclosed
+hide crinnorm 
+"She brings you over to the police station's desk."
+"2 people in the cells next to you, all with prison tags that read Sour and FBI."
+Sour "Can't believe I got a bloody life sentence for beating up that stupid {color=#ACE599}Dream{/color} worshipper."
+show crinhuh
+Crin "Sour, you got a life sentance for police brutality. The fuck you on about?"
+show layeyesclosed at right
+Lay "Yikes..."
+hide crinhuh
+hide layeyesclosed
+
+show laynormal
+
+Lay "FBI, you still have another hour on your visit, and Sour, Well.."
+hide laynormal
+FBI "Got it."
+Sour "Yeah yeah.. piss off :(."
+
+with vpunch 
+"Suddenly a man dressed in a white suit with green pinstripes enters the station,"
+"sits down and pulls back his matching fedora, rubbing a promise ring on his finger, and looks at you."
+show layblush
+
+Lay "Average."
+hide layblush
+Average "Lay."
+
+
+
 
 
 
