@@ -722,6 +722,8 @@ show layblush
 Lay "Average."
 hide layblush
 Average "Lay."
+Average "I'm here to oversee this entire interrogation, Bring Dico in to play starboard with the inmates."
+
 
 
 
