@@ -86,7 +86,7 @@ with Pause (1)
 
 show splashscreen with dissolve
 with Pause(2)
-hide splashscreen with dissolve 
+hide splashscreen with dissolve
 
 
 
@@ -646,8 +646,27 @@ Lay "You're probably hungry too, let me see if I have any spare cash."
 show laysmile
 Lay "Here we go. 20 {color=#ACE599}trollars{/color}!"
 $ trollars += 20
-"{color=#ACE599}You've just recieved 20 trollars!{/color}"
+python:
+         trollars = 20 #starting amount
+         inv = []
+         seen_items = []
 
+        # crafting
+         known_recipes = []
+         seen_recipes = []
+         made_recipes = []
+         newitem = ""
+
+        # shop inventory
+         market = []
+
+        # quests
+         new_quests = []
+         active_quests = []
+         completed_quests = []
+
+"{color=#ACE599}You've just recieved 20 trollars!{/color}"
+show screen shop
 
 
 
