@@ -301,12 +301,8 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-
-            textbutton _("Start") action Start()
-            
-
+            textbutton _("New Game") action Start()
         else:
-            
             textbutton _("History") action ShowMenu("history")
 
             textbutton _("Save") action ShowMenu("save")

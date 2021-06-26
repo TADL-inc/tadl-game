@@ -88,10 +88,8 @@ show splashscreen with dissolve
 with Pause(2)
 hide splashscreen with dissolve
 
+return 
 
-
-
-return
 
 
 label start:
