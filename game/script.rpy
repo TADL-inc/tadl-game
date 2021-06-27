@@ -223,7 +223,7 @@ if name == "Dream":
     python:
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
-      
+    play movie "dream_fight_HD.mp4"
     
     $ renpy.quit()
 
@@ -650,6 +650,7 @@ Lay "You're probably hungry too, let me see if I have any spare cash."
 show laysmile
 Lay "Here we go. 20 {color=#ACE599}trollars{/color}!"
 $ trollars += 20
+
 python:
          trollars = 20 #starting amount
          inv = []
