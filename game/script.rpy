@@ -621,8 +621,13 @@ show layeyesclosed at right
 Lay "Ah, that sucks. Welp lets get going [name]."
 Lay "See ya croc!"
 
-hide crocmad
+hide crocnormal
 hide layeyesclosed
+hide crochappy
+hide croctalk 
+hide layeyesclosed
+hide laytalk
+
 "You and Lay get going, making your way to General2."
 
 jump general2
