@@ -790,7 +790,7 @@ Dico "Thanks to Alice and Crin for Coding and Compiling the game, you guys suck 
 hide dicosuithap
 Crin "bro i will remove you from this game so quickly you wouldnt see me. suck ass"
 show dicosuitsmile
-Dico "Thanks to AcetoSpades, Crocidy, Julie, and… Dico for working on the music."
+Dico "Thanks to AcetoSpades, Crocidy, Julie, ChaoticCatta, and… Dico for working on the music."
 hide dicosuitsmile
 show dicosuitbro
 Dico "Dico... what a dumbass fucking name"
