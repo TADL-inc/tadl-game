@@ -809,18 +809,19 @@ hide dicosuitsmile
 show dicosuitbro
 Dico "Dico... what a dumbass fucking name"
 show dicosuitsmile
+hide dicosuitbro
 Dico "Thanks to FBI, Kyle, Crin"
+hide dicosuitsmile
+hide dicosuithap
 show dicosuitnerv
-Dico " " 
 Dico "(again)"
 hide dicosuitnerv
-
-Dico "nitro, stickmirror, Cary, Chalky, Em, Nero, nexus, Starry, and… Dico…"
 show dicosuitbro
-Dico " "
+Dico "nitro, stickmirror, Cary, Chalky, Em, Nero, nexus, Starry, and… Dico…"
 Dico "Again… for doing any art and visuals"
 Dico " I still hate that Dico guy who's stealing my name. "
 hide dicosuitbro
+show dicosuithap
 Dico "thanks to swep, alex, sour, and pretty much everyone else I just mentioned for contributing to the story. "
 show dicosuitbro
 Dico "Thanks to Bonk and Looking for… idk what did they do? They just have a role that says “Lad”, idk, thanks to them anyways."

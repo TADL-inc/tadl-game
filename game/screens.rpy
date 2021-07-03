@@ -1041,6 +1041,12 @@ screen keyboard_help():
         text _("Takes a screenshot.")
 
     hbox:
+        label "Continue"
+        text _("Loads most recent quick save.")
+
+
+
+    hbox:
         label "V"
         text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
