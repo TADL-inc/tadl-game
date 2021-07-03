@@ -254,7 +254,7 @@ if name == "Texas":
 
 if name == "Dream":
     python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
     play movie "dream_fight_HD.mp4"
     
@@ -262,7 +262,7 @@ if name == "Dream":
 
 if name == "dream":
     python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
       
     
@@ -270,7 +270,7 @@ if name == "dream":
 
 if name == "Dreamwastaken":
     python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, i used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
       
     
@@ -295,6 +295,20 @@ if name == "cd":
 if name == "Cloud":
     Lay "I hate women."
 
+if name == "Sour":
+    Lay "sour here you cant take that name thats mine twat"
+
+if name == "sour":
+    Lay "sour here you cant take that name thats mine twat"
+
+if name == "gaster":
+     Lay "=)"
+     $ renpy.quit()
+
+if name == "Gaster":
+     Lay "=)"
+     $ renpy.quit()
+
 
 
 else:
@@ -315,7 +329,7 @@ menu:
         show layeyesclosed
         Lay "Oh man, you're a bit stupid arent ya?"
 
-        Lay "Anyways, i might as well show you around while you're here."
+        Lay "Anyways, I might as well show you around while you're here."
 
     "Idk":
         show laynormal
@@ -336,7 +350,7 @@ scene black
 show bg townsquare
 
 with dissolve
-"It was a statue of the town's mascot, the trollface, standing in a pool of liquid gold that seemed to be coming from the mascots hands."
+"It was a statue of the town's mascot, the Trollface, standing in a pool of liquid gold that seemed to be coming from the mascots hands."
 "There, a narrow cobblestone path was coming from the starboard ; a massive field of brightly coloured grass surrounding the fountain."
 "Next to the fountain was a huge sign with \"cover yourself in OIL\" written on it."
 "You suddenly feel the urge to cover yourself with the blissful fluid that was gently glistening in the sun."
@@ -363,7 +377,7 @@ Lay "Oh fuck off!"
 
 show laytalk
 Lay "Don't mind him."
-Lay "He always comes, starts shit and then disapear. Fucking coward."
+Lay "He always comes, starts shit and then disappears. Fucking coward."
 
 show laysmile
 
@@ -388,7 +402,7 @@ menu:
 
     "General-2":
         show laynormal
-        Lay "Not many people go here actually, but i'll still show you either way."
+        Lay "Not many people go here actually, but I'll still show you."
         jump general2
 
 
@@ -433,7 +447,7 @@ Dubya "I LOVE women."
 show cloudangry at left 
 Cloud "Well, I HATE women."
 
-Dubya "Your opinion won't make me want to not love women."
+Dubya "Your opinion won't make me not love women."
 Cloud "It should, because I hate women!"
 hide dubangry
 hide cloudangry
@@ -443,7 +457,7 @@ hide cloudnormal
 show cloudnormal
 Cloud "New face around here eh?"
 show cloudhappy
-Cloud "Name's Cloud. Guy I was talkin' to's Dubya"
+Cloud "Name's Cloud. Guy I was talkin' to Dubya"
 hide cloudhappy
 hide cloudnormal
 show dubsmug
@@ -485,7 +499,7 @@ hide cloudangry
 hide dubangry
 "This goes on for another 10 minutes,"
 with vpunch
-"Until another man walks into the room and slams on the poker table, splattering the chips everywhere."
+"Until another man walks into the room and slams on the poker table, scattering the chips everywhere."
 show dicoangry with dissolve
 Dico "SHUT THE FUCK UP, YOU TWO!"
 Dico "WE DON'T CARE ABOUT WOMEN!"
@@ -539,12 +553,12 @@ if name == "Marcel":
 else:
 
 
-    Dico "The only way it could get worse is if marcel was here,"
+    Dico "The only way it could possibly get any worse is if Marcel was here,"
     Dico "and he’s probably playing some furry game or something right now."
 
 
 show dicohappy
-Dico "Oh, sorry, i’m rambling again, I’ll go deal with them, see ya!"
+Dico "Oh, sorry, I’m rambling again, I’ll go deal with them, see ya!"
 hide dicohappy
 hide dicoangry
 show layeyesclosed at center with dissolve
@@ -581,10 +595,10 @@ label general2:
 stop music fadeout 1.0
 play music "bitch.mp3" fadein 1.5
 scene black
-"As you and Lay walked through the busingling city, you wonder to your self, What is General-2?"
-"The city was abnormal. Every where you looked, a different scene was going on."
-"For example of when you saw a talking cheeseburger while you were passing through the market with Lay."
-"Or when you saw a man dressed in a megaman costume running around with bread in his mouth."
+"As you and Lay walked through the bustling city, you wonder to yourself, What is General-2?"
+"The city was abnormal. Everywhere you looked, a different scene was going on."
+"Like when you saw a talking cheeseburger while you were passing through the market."
+"Or when you saw a man dressed in a Megaman costume running around with bread in his mouth."
 "Or the time you saw a \"Gangster\" screaming Bonk clan when you where passing the L'stanberg Art department."
 "This city was truly cursed."
 
@@ -594,12 +608,12 @@ Lay "We're here!"
 show bg gen2 with dissolve
 hide laynormal
 show laytalk
-Lay "This is where everyone one in the town goes when General1 is locked..."
+Lay "This is where everyone in the town goes when General 1 is locked..."
 
 menu:
 
     set menuset
-    "Why is General1 locked?":
+    "Why is General 1 locked?":
         show layeyesclosed
         Lay " {color=#ACE599}Riots...{/color}"
         Lay "lots and lots of riots."
@@ -607,11 +621,11 @@ menu:
     
     "Why is it so empty right now?":
         show layeyesclosed
-        Lay "We havent had a contraversy in a while..."
+        Lay "We havent had a riot in a while..."
 
 show laycry
 Lay "Come on lets go.."
-Lay "This place makes me more than sad."
+Lay "This place just makes me sad."
 jump verfi
 
 
@@ -627,8 +641,8 @@ play music "Kingdom (Day Theme).mp3 "fadein 2.0
 scene bg art with dissolve 
 "Lay stops you."
 show laysmile
-Lay "I love this place! It's where all the artist live."
-Lay "Look! There's one over there!!"
+Lay "I love this place! It's where all the artists live."
+Lay "Look, there's one over there!!"
 hide laysmile
 show laytalk at right with easeinright
 show crocnormal at left with easeinleft
@@ -661,7 +675,7 @@ hide croctalk
 hide layeyesclosed
 hide laytalk
 
-"You and Lay get going, making your way to General2."
+"You and Lay get going, making your way towards General 2."
 
 jump general2
 return
@@ -689,7 +703,7 @@ hide laycry
 scene bg pol 
 play music "AveragesTheme.mp3" fadein 1.0
 with dissolve
-"You see someone telling some jokes to what it seems the inamtes of this police station."
+"You see someone telling jokes to what seems to be the inmates of the police station."
 show crinhappy
 Crin "And then I said,"
 Crin "Sussy Bal-"
@@ -723,7 +737,7 @@ hide crinnorm
 "2 people in the cells next to you, all with prison tags that read Sour and FBI."
 Sour "Can't believe I got a bloody life sentence for beating up that stupid {color=#ACE599}Dream{/color} worshipper."
 show crinhuh
-Crin "Sour, you got a life sentance for police brutality. The fuck you on about?"
+Crin "Sour, you got a life sentence for police brutality. The fuck you on about?"
 show layeyesclosed at right
 Lay "Yikes..."
 hide crinhuh
@@ -768,10 +782,10 @@ play music "Art_general.mp3"
 "Wait, I thought Average said Starboard?"
 show dicosuitbro
 Dico "You see:"
-Dico "Crin does not have enough time to finish the mini game right now."
+Dico "Crin does not have enough time to finish the minigame right now."
 hide dicosuitbro
 show dicosuithap
-Dico "So! You're stuck here with me!"
+Dico "So, you're stuck here with me!"
 menu:
     set menuset
 
@@ -790,7 +804,7 @@ Dico "Thanks to Alice and Crin for Coding and Compiling the game, you guys suck 
 hide dicosuithap
 Crin "bro i will remove you from this game so quickly you wouldnt see me. suck ass"
 show dicosuitsmile
-Dico "Thanks to AcetoSpades, Crocidy, Julie, ChaoticCatta, and… Dico for working on the music."
+Dico "Thanks to AcetoSpades, Crocidy, Julie, and… Dico for working on the music."
 hide dicosuitsmile
 show dicosuitbro
 Dico "Dico... what a dumbass fucking name"
@@ -818,6 +832,8 @@ Dico "Thanks to texas, for literally nothing, shut the fuck up texas, we could n
 Dico " A large fuck you to jfify, agata, and all other banned members, you know what you did"
 hide dicosuitbro
 show dicosuithap
+Sour "especially agata (shes the impostor from among us)"
+
 
 Dico " Thanks to robin and every other artist for all the fanart, like holy shit there is so much now, and most of it is of me, why?"
 hide dicosuithap
