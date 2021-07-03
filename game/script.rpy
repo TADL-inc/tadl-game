@@ -637,7 +637,7 @@ return
 
 label art:
 stop music fadeout 1.0
-play music "Kingdom (Day Theme).mp3 "fadein 2.0
+play music "Kingdom (Day Theme).mp3" fadein 2.0
 scene bg art with dissolve 
 "Lay stops you."
 show laysmile
