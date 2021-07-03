@@ -302,6 +302,8 @@ screen navigation():
 
         if main_menu:
             textbutton _("New Game") action Start()
+
+            textbutton _("Continue") action QuickLoad()
         else:
             textbutton _("History") action ShowMenu("history")
 

@@ -31,7 +31,7 @@ define config.version = "1.0"
 
 define gui.about = _p("""
 Game made By: Crin 
-Build: tadl 1.0
+    \n{b} Build: tadl 1.0 {/br}
 """)
 
 

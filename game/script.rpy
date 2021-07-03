@@ -40,6 +40,37 @@ image crinmad = "Crin4.png"
 image crincry = "Crin5.png"
 image crinangry = "Crin6.png"
 image crinhuh = "Crin7.png"
+image bg gen1 = "bg gen1.png"
+image dicosuitnerv = "dicosuit1.png"
+image dicosuitsmile = "dicosuit2.png"
+image dicosuithap = "dicosuit3.png"
+image dicosuitbro = "dicosuit4.png"
+image bg credit = "bg credits.png"
+image avenorm = "Average6.png"
+image avesus = "Average1.png"
+image avesad = "Average2.png"
+image avemad = "Average3.png"
+image avehap = "Average4.png"
+image avebored = "Average5.png"
+image fbinorm = "Fbi1.png"
+image fbihap = "Fbi2.png"
+image fbimad = "Fbi3.png"
+image fbismile = "Fbi4.png"
+image fbisad = "Fbi5.png"
+image fbidead = "Fbi6.png"
+image fbitroll = "Fbi7.png"
+image sourcry = "SourCry.png"
+image sourhap = "SourHappy.png"
+image sournorm = "SourNorm.png"
+image soursad = "SourSad.png"
+image soursmi = "SourSmile.png"
+
+
+
+
+
+
+
 
 default trollars = True
 default menuset = set()
@@ -77,6 +108,8 @@ define Average = Character("Average",
 
 define FBI = Character("FBI",
                     who_color="#99E09F", callback = callback)
+
+define config.autosave_frequency = 10
 
 
 
@@ -365,7 +398,7 @@ menu:
 
     "Lstanberg Art Department":
         show laysmile
-        Lay "i love this place come on!"
+        Lay "I love this place come on!"
         jump art
 
 
@@ -387,7 +420,7 @@ screen flower:
 label general1:
 stop music fadeout 1.0
 play music "Circ Of Quirk.mp3" fadein 1.0
-scene black
+scene bg gen1 with dissolve
 
 "As you walk in #general, you can hear yelling, and what appears to be two people having an argument."
 "You then see a mysterious purple figure throwing stupid pictures on what seems to be a poker table... that nobodys even playing poker on."
@@ -515,20 +548,20 @@ Dico "Oh, sorry, i’m rambling again, I’ll go deal with them, see ya!"
 hide dicohappy
 hide dicoangry
 show layeyesclosed at center with dissolve
-Lay "Hey, how about we head to the shop? I'm starving."
+Lay "Alright, where do want go to next?"
 
 menu:
     set menuset
 
     "General-2":
-        show laynormal
-        Lay "I guess eating could wait, come on Let's go."
+        show layeyesclosed
+        Lay "Oh boy..."
         jump general2
 
-    "Shop":
+    "Lstanberg Art Department":
         show laysmile
-        Lay "Man, wait till you see the food here!"
-        jump shop
+        Lay "I'm so excited!"
+        jump art
 
 
 
@@ -618,7 +651,7 @@ Crocidy "OH SHIT! Welcome!"
 show crocnormal at left
 Crocidy "Although currently the art depo is busy so we have limited visits today. Maybe come back later! :)"
 show layeyesclosed at right
-Lay "Ah, that sucks. Welp lets get going [name]."
+Lay "Ah, that sucks. Welp let's get going [name]."
 Lay "See ya croc!"
 
 hide crocnormal
@@ -633,46 +666,6 @@ hide laytalk
 jump general2
 return
 
-label shop:
-scene black 
-hide laysmile
-hide layeyesclosed
-hide dicoangry
-
-stop music fadeout 1.0
-play music "lstanberg_shop.mp3" fadein 1.0 fadeout 1.0
-
-"You and Lay start walking over to the market place, a certain place outshining the rest."
-
-show laynormal with dissolve
-Lay "You're probably hungry too, let me see if I have any spare cash."
-"Lay digs through her pockets, looking for spare change."
-show laysmile
-Lay "Here we go. 20 {color=#ACE599}trollars{/color}!"
-$ trollars += 20
-
-python:
-         trollars = 20 #starting amount
-         inv = []
-         seen_items = []
-
-        # crafting
-         known_recipes = []
-         seen_recipes = []
-         made_recipes = []
-         newitem = ""
-
-        # shop inventory
-         market = []
-
-        # quests
-         new_quests = []
-         active_quests = []
-         completed_quests = []
-
-"{color=#ACE599}You've just recieved 20 trollars!{/color}"
-show screen shop
-
 
 
 jump art 
@@ -681,7 +674,7 @@ label verfi:
 stop music fadeout 1.5
 scene black 
 "Lay grabs your hand and starts walking to a destination unbeknownst to you."
-"You try asking her where u are going but she doesn't answer..."
+"You try asking her where you are going but she doesn't answer..."
 "Finally she stops you, infront of you seemed to be a police station."
 "Before you can say something, she starts talking."
 show layeyesclosed
@@ -694,15 +687,20 @@ hide laycry
 
 "She grabs your hand once more and you both step inside the police station"
 scene bg pol 
+play music "AveragesTheme.mp3" fadein 1.0
 with dissolve
 "You see someone telling some jokes to what it seems the inamtes of this police station."
 show crinhappy
 Crin "And then I said,"
 Crin "Sussy Bal-"
 hide crinhappy
-"sour and fbi laughs (placeholder)"
+show sourhappy at right with vpunch 
+show fbitroll at left with vpunch 
+
 show crinhappy
 Crin "Oh Hi Lay!"
+hide sourhappy
+hide fbitroll
 hide crinhappy
 show crinhuh
 Crin "Who the fuck is this??"
@@ -721,7 +719,7 @@ Crin "Right then, bring him to the desk."
 hide crintalk
 hide layeyesclosed
 hide crinnorm 
-"She brings you over to the police station's desk."
+"She brings you over to the police station's desk"
 "2 people in the cells next to you, all with prison tags that read Sour and FBI."
 Sour "Can't believe I got a bloody life sentence for beating up that stupid {color=#ACE599}Dream{/color} worshipper."
 show crinhuh
@@ -735,18 +733,118 @@ show laynormal
 
 Lay "FBI, you still have another hour on your visit, and Sour, Well.."
 hide laynormal
+show fbinorm with dissolve
 FBI "Got it."
-Sour "Yeah yeah.. piss off :(."
+hide fbinorm
 
+show soursad
+Sour "Yeah yeah.. piss off :(."
+hide soursad
 with vpunch 
-"Suddenly a man dressed in a white suit with green pinstripes enters the station,"
+"Suddenly a man dressed in a green vneck sweater and a black fedora enters the station,"
 "sits down and pulls back his matching fedora, rubbing a promise ring on his finger, and looks at you."
 show layblush
-
 Lay "Average."
 hide layblush
+show avehap
 Average "Lay."
+"How is this man talking?"
+hide avehap
+show avenorm
 Average "I'm here to oversee this entire interrogation, Bring Dico in to play starboard with the inmates."
+scene black
+"..."
+"What's happening?"
+show dicosuitsmile
+Dico "Yo!"
+
+"Where am I?"
+hide dicosuitsmile
+show dicosuithap
+Dico "Well,"
+Dico "Welcome to the credits!"
+scene bg credit
+play music "Art_general.mp3"
+"Wait, I thought Average said Starboard?"
+show dicosuitbro
+Dico "You see:"
+Dico "Crin does not have enough time to finish the mini game right now."
+hide dicosuitbro
+show dicosuithap
+Dico "So! You're stuck here with me!"
+menu:
+    set menuset
+
+    "So what do you do here?":
+        Dico "Well, I'm here to read out the credits!"
+        Dico "So, let's get to it!"
+
+    "How do i leave?":
+        show dicosuitbro
+        Dico "Bro, just please the exit button on your window. Are you 5?"
+        Dico "Here I'll do it for ya."
+        $ renpy.quit()
+    
+Dico "Alrighty, where do we start"
+Dico "Thanks to Alice and Crin for Coding and Compiling the game, you guys suck ass,"
+hide dicosuithap
+Crin "bro i will remove you from this game so quickly you wouldnt see me. suck ass"
+show dicosuitsmile
+Dico "Thanks to AcetoSpades, Crocidy, Julie, and… Dico for working on the music."
+hide dicosuitsmile
+show dicosuitbro
+Dico "Dico... what a dumbass fucking name"
+show dicosuitsmile
+Dico "Thanks to FBI, Kyle, Crin"
+show dicosuitnerv
+Dico " " 
+Dico "(again)"
+hide dicosuitnerv
+
+Dico "nitro, stickmirror, Cary, Chalky, Em, Nero, nexus, Starry, and… Dico…"
+show dicosuitbro
+Dico " "
+Dico "Again… for doing any art and visuals"
+Dico " I still hate that Dico guy who's stealing my name. "
+hide dicosuitbro
+Dico "thanks to swep, alex, sour, and pretty much everyone else I just mentioned for contributing to the story. "
+show dicosuitbro
+Dico "Thanks to Bonk and Looking for… idk what did they do? They just have a role that says “Lad”, idk, thanks to them anyways."
+hide dicosuitbro
+hide dicosuithap
+Crin "Bro honestly dont know what they fucking do too. no hate tho tee hee"
+show dicosuitbro
+Dico "Thanks to texas, for literally nothing, shut the fuck up texas, we could not care less."
+Dico " A large fuck you to jfify, agata, and all other banned members, you know what you did"
+hide dicosuitbro
+show dicosuithap
+
+Dico " Thanks to robin and every other artist for all the fanart, like holy shit there is so much now, and most of it is of me, why?"
+hide dicosuithap
+Crin "Bro i made the game, wheres my fanart?? :dread:"
+show dicosuitsmile
+Dico "a special thank you to Average, you may be british but we think you’re still cool"
+hide dicosuitsmile
+Crin "Ay! No hate on my british fellow. Im british too."
+show dicosuithap
+Dico " and thanks to you, the player, for being here."
+show crinhappy at right with easeinright
+Crin "Yeah genuinely thank you so much for your support. This game has fucking improved my life to the point that no words could describe it. Thank you."
+hide crinhappy
+hide dicosuithap
+"{color=#ACE599} Sincerely, the TADL team.{/color}."
+
+
+scene black with fade
+stop music fadeout 2.0
+menu:
+    "main menu?":
+       "You still have alot of secrets to unveil..."
+       $ MainMenu(confirm=False)()
+
+    "quit?":
+        "It was fun while it lasted."
+        $ renpy.quit()
 
 
 
