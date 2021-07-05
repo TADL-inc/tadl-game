@@ -64,6 +64,16 @@ image sourhap = "SourHappy.png"
 image sournorm = "SourNorm.png"
 image soursad = "SourSad.png"
 image soursmi = "SourSmile.png"
+image swepnorm = "Swep1.png"
+image swepeyesclosed = "Swep2.png"
+image swephuh = "Swep3.png"
+image swepflust = "Swep4.png"
+image swepcry = "Swep5.png"
+image swepangry = "Swep6.png"
+image swepblush = "Swep7.png"
+image sweptalk = "Swep8.png"
+image swepsmile = "Swep9.png"
+image swepblushtalk = "Swep10.png"
 
 
 
