@@ -121,6 +121,12 @@ define Average = Character("Average",
 define FBI = Character("FBI",
                     who_color="#99E09F", callback = callback)
 
+
+define T = Character("T",
+                    who_color="#581845", callback = callback)
+
+
+
 define config.autosave_frequency = 10
 
 
