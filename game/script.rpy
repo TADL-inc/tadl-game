@@ -111,6 +111,8 @@ define Crin = Character("Crin",
 define Sour = Character("Sour",
                     who_color="#99E09F", callback = callback)
 
+define Swep = Character("Swep",
+                    who_color="#EDC3FD", callback = callback)
 
 
 define Average = Character("Average",
@@ -194,30 +196,6 @@ if name == "rnexus":
 if name == "Rnexus":
     Lay "Lol stupid!!111"
 
-if name == "agata":
-    show layangry
-    Lay "We are going to turn you into a smoothie. :D"
-    $ renpy.quit()
-
-
-
-if name == "Agata":
-    show layangry
-    Lay "We are going to turn you into a smoothie. :D"
-    $ renpy.quit()
-
-
-
-
-if name == "Jfify":
-    show layangry
-    Lay "Go suicide bait some where else you git."
-    $ renpy.quit()
-
-if name == "jfify":
-    show layangry
-    Lay "Go suicide bait some where else you git."
-    $ renpy.quit()
 
 if name == "cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
@@ -266,8 +244,6 @@ if name == "Dream":
     python:
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
-    play movie "dream_fight_HD.mp4"
-    
     $ renpy.quit()
 
 if name == "dream":
@@ -310,6 +286,7 @@ if name == "Sour":
 
 if name == "sour":
     Lay "sour here you cant take that name thats mine twat"
+    
 
 if name == "gaster":
      Lay "=)"
@@ -839,12 +816,6 @@ hide dicosuitbro
 hide dicosuithap
 Crin "Bro honestly dont know what they fucking do too. no hate tho tee hee"
 show dicosuitbro
-Dico "Thanks to texas, for literally nothing, shut the fuck up texas, we could not care less."
-Dico " A large fuck you to jfify, agata, and all other banned members, you know what you did"
-hide dicosuitbro
-show dicosuithap
-Sour "especially agata (shes the impostor from among us)"
-
 
 Dico " Thanks to robin and every other artist for all the fanart, like holy shit there is so much now, and most of it is of me, why?"
 hide dicosuithap
