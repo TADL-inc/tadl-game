@@ -74,7 +74,7 @@ image swepblush = "Swep7.png"
 image sweptalk = "Swep8.png"
 image swepsmile = "Swep9.png"
 image swepblushtalk = "Swep10.png"
-
+image movie = Movie(xpos=0, ypos=0, delay=11)
 
 
 
@@ -219,22 +219,12 @@ if name == "Crin":
 if name == "crin":
     Lay "Oh hi crin :)"
 
-if name == "Average":
+if name == "average" or "Average":
     show laysmile
     Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
 
-
-if name == "average":
-    show laysmile
-    Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
-
-if name == "Gerno":
+if name == "Gerno" or "gerno":
     Lay "Gerno stop playing KSP 24/7"
-
-
-if name == "gerno":
-    Lay "Gerno stop playing KSP 24/7"
-
 
 if name == "schloob":
     Lay "schloob"
@@ -246,27 +236,13 @@ if name == "Texas":
     $ renpy.quit()
 
 
-if name == "Dream":
+if name == "Dream" or "dream" or "Dreamwastaken":
     python:
+        $ renpy.movie_cutscene("dream_fight_HD.ogv")
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
     $ renpy.quit()
 
-if name == "dream":
-    python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
-        except: pass
-      
-    
-    $ renpy.quit()
-
-if name == "Dreamwastaken":
-    python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
-        except: pass
-      
-    
-    $ renpy.quit()
 
 
 if name == "Gogy":
