@@ -238,7 +238,6 @@ if name == "Texas":
 
 if name == "Dream" or "dream" or "Dreamwastaken":
     python:
-        $ renpy.movie_cutscene("dream_fight_HD.ogv")
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
     $ renpy.quit()
