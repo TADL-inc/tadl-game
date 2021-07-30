@@ -125,7 +125,11 @@ define FBI = Character("FBI",
 define T = Character("T",
                     who_color="#581845", callback = callback)
 
+define You = Character("You",
+                    who_color="#fffff", callback = callback)
 
+define q = Character("???",
+                    who_color="#fffff", callback = callback)
 
 define config.autosave_frequency = 10
 
@@ -177,15 +181,15 @@ with dissolve
 
 "You take a good look at the sign in front of  you and wonder where you are..."
 
-Lay "Hey?"
+q "Hey?"
 "You hear a strange voice from out of nowhere."
 show laynormal
 with dissolve
 
 with zoomin
 show laytalk
-Lay "You seem new?"
-Lay "What's your name??"
+q "You seem new?"
+q  "What's your name??"
 
 python:
 
@@ -219,11 +223,11 @@ if name == "Crin":
 if name == "crin":
     Lay "Oh hi crin :)"
 
-if name == "average" or "Average":
+if name == "average":
     show laysmile
     Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
 
-if name == "Gerno" or "gerno":
+if name == "Gerno":
     Lay "Gerno stop playing KSP 24/7"
 
 if name == "schloob":
@@ -236,7 +240,7 @@ if name == "Texas":
     $ renpy.quit()
 
 
-if name == "Dream" or "dream" or "Dreamwastaken":
+if name == "Dream":
     python:
         try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
         except: pass
@@ -283,7 +287,7 @@ else:
 
     show laysmile
 
-    Lay "Nice to meet ya [name]!"
+    Lay "Nice to meet ya [name], my name is Lay!"
     # bro
     show laynormal
 Lay "Wait a minute... How did you get here?"
@@ -347,6 +351,8 @@ show laytalk
 Lay "Don't mind him."
 Lay "He always comes, starts shit and then disappears. Fucking coward."
 
+
+
 show laysmile
 
 
@@ -360,6 +366,8 @@ menu:
     "Where do you want to go?"
 
     "General-1":
+        hide laytalk
+        hide laysmile
         show layeyesclosed
         Lay "Oh boy, my favourite place..."
         jump general1
@@ -369,6 +377,8 @@ menu:
 
 
     "General-2":
+        hide laytalk
+        hide laysmile
         show laynormal
         Lay "Not many people go here actually, but I'll still show you."
         jump general2
@@ -379,10 +389,20 @@ menu:
 
 
     "Lstanberg Art Department":
+        hide laytalk
+        hide laysmile
         show laysmile
         Lay "I love this place come on!"
         jump art
 
+     
+
+    "Can I leave instead?":
+        hide laytalk
+        hide laysmile
+        show layangry
+        Lay "Shit yourself!!"
+        $ renpy.quit
 
 
 
@@ -678,7 +698,6 @@ Crin "Sussy Bal-"
 hide crinhappy
 show sourhappy at right with vpunch 
 show fbitroll at left with vpunch 
-
 show crinhappy
 Crin "Oh Hi Lay!"
 hide sourhappy
@@ -737,6 +756,128 @@ Average "I'm here to oversee this entire interrogation, Bring Dico in to play st
 scene black
 "..."
 "What's happening?"
+
+"Sorry mate Crin is shit at programming the funny mini game so you get sent to chapter 2 lol!!"
+
+label chap2gen1:
+
+    show laysmile
+    Lay "Welcome to L'stanberg"
+    hide laysmile
+    show laytalk
+    Lay "I'm suprised you survived starboard!"
+
+    menu:
+        "I didn't even play starboar-":
+            You "I didn't even play starboar-"
+
+        "Lay interupts you and continues speaking"
+
+        "Thanks!":
+            You "Thanks!!"
+        
+hide laytalk
+show layeyesclosed
+Lay "Oh Yeah!!{color=#7D00FF} Dico{/color} is gonna be joining us. "
+
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 show dicosuitsmile
 Dico "Yo!"
 
