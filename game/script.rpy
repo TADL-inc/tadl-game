@@ -126,10 +126,10 @@ define T = Character("T",
                     who_color="#581845", callback = callback)
 
 define You = Character("You",
-                    who_color="#fffff", callback = callback)
+                    who_color="#ffffff", callback = callback)
 
 define q = Character("???",
-                    who_color="#fffff", callback = callback)
+                    who_color="#ffffff", callback = callback)
 
 define config.autosave_frequency = 10
 
@@ -143,7 +143,7 @@ show splashscreen with dissolve
 with Pause(2)
 hide splashscreen with dissolve
 
-return 
+return
 
 
 
@@ -199,31 +199,21 @@ python:
     if not name:
         name = "Dumbass"
 
-if name == "rnexus":
+if name == "rnexus" or name == "Rnexus":
     Lay "Lol stupid!!111"
 
 
-if name == "Rnexus":
-    Lay "Lol stupid!!111"
 
 
-if name == "cary":
-    Lay "wtf cary!?!?!?!?!???!!!!"
-    Lay "Adobe Flash CS6 Cracked Free 2020 Google Drive.rar"
-
-if name == "Cary":
+if name == "cary" or name == "Cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
     Lay "Adobe Flash CS6 Cracked Free 2020 Google Drive.rar"
 
 
-if name == "Crin":
+if name == "Crin" or name == "crin":
     Lay "Oh hi crin :)"
 
-
-if name == "crin":
-    Lay "Oh hi crin :)"
-
-if name == "average":
+if name == "average" or name == "Average":
     show laysmile
     Lay "AWOOGA HUMANA HUMANA AVERAGE ME AMOR :HEART: :HEART:"
 
@@ -236,48 +226,37 @@ if name == "schloob":
 if name == "Kosma":
     $ renpy.quit()
 
-if name == "Texas": 
+if name == "Texas":
     $ renpy.quit()
 
 
-if name == "Dream":
-    python:
-        try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
-        except: pass
+if name == "Dream" or name == "dream" or name == "Dreamwastaken" or name == "dreamwastaken":
+    # python:
+    #    try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+    #    except: pass
+      $ renpy.movie_cutscene("dream_fight_HD.ogv")
+      $ renpy.quit()
+
+
+
+
+if name == "Gogy" or name == "gogy":
+    Lay "Disgusting"
     $ renpy.quit()
 
 
-
-if name == "Gogy":
-    $ renpy.quit()
-
-
-if name == "gogy":
-    $ renpy.quit()
-
-if name == "CD":
+if name == "CD" or name == "cd":
     Lay "Cracker balls"
     $ renpy.quit()
 
-if name == "cd":
-    Lay "Cracker dick"
-    $ renpy.quit()
-
-if name == "Cloud":
+if name == "Cloud" or name == "cloud":
     Lay "I hate women."
 
-if name == "Sour":
+if name == "Sour" or name == "sour":
     Lay "sour here you cant take that name thats mine twat"
 
-if name == "sour":
-    Lay "sour here you cant take that name thats mine twat"
-    
 
-if name == "gaster":
-     Lay "=)"
-     $ renpy.quit()
-
-if name == "Gaster":
+if name == "gaster" or name == "Gaster":
      Lay "=)"
      $ renpy.quit()
 
@@ -395,13 +374,14 @@ menu:
         Lay "I love this place come on!"
         jump art
 
-     
+
 
     "Can I leave instead?":
         hide laytalk
         hide laysmile
         show layangry
         Lay "Shit yourself!!"
+
         $ renpy.quit
 
 
@@ -426,13 +406,13 @@ scene bg gen1 with dissolve
 
 "As you walk in #general, you can hear yelling, and what appears to be two people having an argument."
 "You then see a mysterious purple figure throwing stupid pictures on what seems to be a poker table... that nobodys even playing poker on."
-show dubsmug at right 
+show dubsmug at right
 Dubya "I love women."
-show cloudnormal at left 
+show cloudnormal at left
 Cloud "I hate women."
 show dubangry at right
 Dubya "I LOVE women."
-show cloudangry at left 
+show cloudangry at left
 Cloud "Well, I HATE women."
 
 Dubya "Your opinion won't make me not love women."
@@ -458,7 +438,7 @@ Cloud "Hngh, he's getting on my nerves. Hey [name], whose opinion do you think i
 menu:
     set menuset
     "What clan are you willing to join?"
-    
+
 
     "I love women.":
         hide cloudeyesclosed
@@ -479,9 +459,9 @@ menu:
 hide laysmile
 hide laytalk
 
-show dubangry 
+show dubangry
 Dubya "Well, that doesn’t matter because I love women!"
-show cloudangry at left with easeinleft 
+show cloudangry at left with easeinleft
 Cloud "grr.. I HATE WOMEN!"
 hide cloudangry
 hide dubangry
@@ -497,7 +477,7 @@ Cloud "Well, it’s not MY fault that DUBYA loves women!!"
 hide cloudeyesclosed
 show dubtalk1
 Dubya "Well, it’s not MY-"
-hide dubtalk1 
+hide dubtalk1
 show dicoangry
 Dico " I said SHUT UP ABOUT WOMEN!"
 hide dicoangry
@@ -606,7 +586,7 @@ menu:
         Lay " {color=#ACE599}Riots...{/color}"
         Lay "lots and lots of riots."
         Lay "They always get angry so we have to shut everything down to make sure no one gets hurt..."
-    
+
     "Why is it so empty right now?":
         show layeyesclosed
         Lay "We havent had a riot in a while..."
@@ -626,7 +606,7 @@ return
 label art:
 stop music fadeout 1.0
 play music "Kingdom (Day Theme).mp3" fadein 2.0
-scene bg art with dissolve 
+scene bg art with dissolve
 "Lay stops you."
 show laysmile
 Lay "I love this place! It's where all the artists live."
@@ -643,7 +623,7 @@ hide crocnormal
 show crochappy at left
 Crocidy "Yeah, it's been a while!"
 hide crochappy
-show croctalk at left 
+show croctalk at left
 Crocidy "Who's this?"
 hide laysmile
 show laytalk at right
@@ -659,7 +639,7 @@ Lay "See ya croc!"
 hide crocnormal
 hide layeyesclosed
 hide crochappy
-hide croctalk 
+hide croctalk
 hide layeyesclosed
 hide laytalk
 
@@ -670,11 +650,11 @@ return
 
 
 
-jump art 
+jump art
 
 label verfi:
 stop music fadeout 1.5
-scene black 
+scene black
 "Lay grabs your hand and starts walking to a destination unbeknownst to you."
 "You try asking her where you are going but she doesn't answer..."
 "Finally she stops you, infront of you seemed to be a police station."
@@ -688,7 +668,7 @@ hide layeyesclosed
 hide laycry
 
 "She grabs your hand once more and you both step inside the police station"
-scene bg pol 
+scene bg pol
 play music "AveragesTheme.mp3" fadein 1.0
 with dissolve
 "You see someone telling jokes to what seems to be the inmates of the police station."
@@ -696,8 +676,8 @@ show crinhappy
 Crin "And then I said,"
 Crin "Sussy Bal-"
 hide crinhappy
-show sourhappy at right with vpunch 
-show fbitroll at left with vpunch 
+show sourhappy at right with vpunch
+show fbitroll at left with vpunch
 show crinhappy
 Crin "Oh Hi Lay!"
 hide sourhappy
@@ -711,7 +691,7 @@ hide crinhuh
 show crinnorm
 show laynormal at right
 Crin "Oohhh.. well what's this lad doing here then?"
-hide laynormal at right 
+hide laynormal at right
 hide laysmile at right
 show layeyesclosed at right
 Lay "I'm gonna verify them to make them an official member."
@@ -719,7 +699,7 @@ show crintalk
 Crin "Right then, bring him to the desk."
 hide crintalk
 hide layeyesclosed
-hide crinnorm 
+hide crinnorm
 "She brings you over to the police station's desk"
 "2 people in the cells next to you, all with prison tags that read Sour and FBI."
 Sour "Can't believe I got a bloody life sentence for beating up that stupid {color=#ACE599}Dream{/color} worshipper."
@@ -741,7 +721,7 @@ hide fbinorm
 show soursad
 Sour "Yeah yeah.. piss off :(."
 hide soursad
-with vpunch 
+with vpunch
 "Suddenly a man dressed in a green vneck sweater and a black fedora enters the station,"
 "sits down and pulls back his matching fedora, rubbing a promise ring on his finger, and looks at you."
 show layblush
@@ -771,17 +751,20 @@ label chap2gen1:
         "I didn't even play starboar-":
             You "I didn't even play starboar-"
 
-        "Lay interupts you and continues speaking"
+            "Lay interupts you and continues speaking"
 
         "Thanks!":
             You "Thanks!!"
-        
+
 hide laytalk
 show layeyesclosed
 Lay "Oh Yeah!!{color=#7D00FF} Dico{/color} is gonna be joining us. "
+hide laytalk
+hide layeyesclosed
+show laytalk at left with easeinleft
+show dicohappy at right  with easeinright
+Dico "Yo!"
 
-            
-        
 
 
 
@@ -878,6 +861,9 @@ Lay "Oh Yeah!!{color=#7D00FF} Dico{/color} is gonna be joining us. "
 
 
 
+
+label credits:
+scene black
 show dicosuitsmile
 Dico "Yo!"
 
@@ -907,7 +893,7 @@ menu:
         Dico "Bro, just please the exit button on your window. Are you 5?"
         Dico "Here I'll do it for ya."
         $ renpy.quit()
-    
+
 Dico "Alrighty, where do we start"
 Dico "Thanks to Alice and Crin for Coding and Compiling the game, you guys suck ass,"
 hide dicosuithap
@@ -945,6 +931,7 @@ Crin "Bro i made the game, wheres my fanart?? :dread:"
 show dicosuitsmile
 Dico "a special thank you to Average, you may be british but we think you’re still cool"
 hide dicosuitsmile
+Crin "a big thank you to the people who boosted the discord server first, sour, dezelden"
 Crin "Ay! No hate on my british fellow. Im british too."
 show dicosuithap
 Dico " and thanks to you, the player, for being here."
@@ -975,4 +962,4 @@ menu:
 
 
 
-return 
+return
