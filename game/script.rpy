@@ -74,15 +74,20 @@ image swepblush = "Swep7.png"
 image sweptalk = "Swep8.png"
 image swepsmile = "Swep9.png"
 image swepblushtalk = "Swep10.png"
+image over = "over.png"
+image polo = "bg polo.png"
+image polon = "bg polon.png"
+image lads = "bg lads.png"
 image movie = Movie(xpos=0, ypos=0, delay=11)
+image chap2 = "chap2.png"
+image fan = "wow.png"
 
 
 
-
-
-
-
-default trollars = True
+default gen1 = False
+default dpoints = False
+default lpoints = False
+default trollars =True
 default menuset = set()
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -204,7 +209,6 @@ if name == "rnexus" or name == "Rnexus":
 
 
 
-
 if name == "cary" or name == "Cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
     Lay "Adobe Flash CS6 Cracked Free 2020 Google Drive.rar"
@@ -231,9 +235,10 @@ if name == "Texas":
 
 
 if name == "Dream" or name == "dream" or name == "Dreamwastaken" or name == "dreamwastaken":
-    # python:
-    #    try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
-    #    except: pass
+     #python:
+       # try: sys.modules['renpy.error'].report_exception("LOL, GET FUCKED! Man, I used to be such a big fan of you dream. Why are you so scared to call out your fans. Stop hiding behind 'Its only a small perrcentage of my community. Fuck off. Choose a new name.", False)
+       #except: pass
+      $ _skipping = False
       $ renpy.movie_cutscene("dream_fight_HD.ogv")
       $ renpy.quit()
 
@@ -400,6 +405,7 @@ screen flower:
         action Jump("funny")
 
 label general1:
+$ gen1 = True 
 stop music fadeout 1.0
 play music "Circ Of Quirk.mp3" fadein 1.0
 scene bg gen1 with dissolve
@@ -740,33 +746,145 @@ scene black
 "Sorry mate Crin is shit at programming the funny mini game so you get sent to chapter 2 lol!!"
 
 label chap2gen1:
+scene black with dissolve
+stop music fadeout 1.0
 
-    show laysmile
-    Lay "Welcome to L'stanberg"
-    hide laysmile
-    show laytalk
-    Lay "I'm suprised you survived starboard!"
+show chap2 with dissolve
+with Pause(2)
+hide chap2 with dissolve
 
-    menu:
-        "I didn't even play starboar-":
-            You "I didn't even play starboar-"
+scene bg polo with dissolve
+show laysmile with dissolve
+Lay "Welcome to L'stanberg"
+hide laysmile
+show laytalk
+Lay "I'm suprised you survived starboard!"
 
-            "Lay interupts you and continues speaking"
+menu:
+    "I didn't even play starboar-":
+        You "I didn't even play starboar-"
 
-        "Thanks!":
-            You "Thanks!!"
+        "Lay interupts you and continues speaking"
+
+    "Thanks!":
+        You "Thanks!!"
 
 hide laytalk
 show layeyesclosed
 Lay "Oh Yeah!!{color=#7D00FF} Dico{/color} is gonna be joining us. "
-hide laytalk
+if gen1 == False:
+    You "Dico? Whose that?"
+    Lay "He's a trial mod here."
+    You "OOh."
+else:
+    hide laytalk
 hide layeyesclosed
 show laytalk at left with easeinleft
 show dicohappy at right  with easeinright
 Dico "Yo!"
+Dico "Average said I could come with you guys on the tour!"
+menu What:
+    "What should you say?"
+    "That's Great!":
+        You "That's Great, I can't wait to continue the tour with you!"
+        $ dpoints = True
+        hide dicohappy
+        show diconormal at right
+        Dico "I know right!!"
+        $ dpoints += 1
+        show over
+        "{color=#ACE599}You just gained A Dico Relationship Point!{/color}"
+
+
+    "Oh, for fuck sakes":
+        You "Oh, for fuck sakes, why do you have to come?"
+        $ dpoints = True
+        hide dicohappy 
+        show dicoangry at right
+        Dico "Bro? What the fuck?"
+        $ dpoints -= 2
+        hide laytalk
+        show layeyesclosed at left 
+        Lay "Ignore them."
+        show over
+        "{color=#ACE599}You just lost A Dico Relationship Point!{/color}"
+
+You "Where did that come from?"
+"{color=#ACE599}Don't question it.{/color}"
+"{color=#ACE599}Everyone in this game has relationship points{/color}"
+"{color=#ACE599}The more points you have for that character, the more they trust you.{/color}"
+"{color=#ACE599}If you have enough points with them, you can enter special scenes with them.{/color}"
+"{color=#ACE599}And vice versa, If you have enough points in the negative numbers then{/color}"
+"{color=#ACE599}You can also enter different scenes with that character.{/color}"
+You "Cool."
+hide over
+hide layeyesclosed
+hide laytalk 
+hide dicoangry 
+hide diconormal 
+"You spot 2 people leaving the police station hand in hand."
+"One of them you recognise."
+You "Is that Crin?"
+show laynormal
+Lay "Wha?"
+
+You "She dropped something"
+hide laynormal
+"You, Dico and lay go to pick up what looks like a book of the ground."
+show fan 
+You "It looks like fanfiction."
+Lay "Open it :troll:"
+"You open the book. and start reading the pages."
+"Chapter 4: Love has no bounds."
+"'swep: i love u'"
+"'crin: no i love u more'"
+"'swep: not as much as i love u'"
+"'crin: i still love u more'"
+"'crin: then show it~'"
+"'swep then kisses crin softly and deeply'-"
+with vpunch 
+"You immediately close the book in dread."
+You "My eyes."
+Dico "I think we should leave it here."
+Dico "Crin will get pretty {color=#ACE599}Angry{/color} if she sees you with that book."
+default fan = False
+menu:
+    "Take the book?"
+    "Yes":
+        $ fan = True
+        You "I think we will be fine..."
+        "{color=#ACE599}Crin x Swep fanficting has been added to your inventory.{/color}"
+    "No":
+        You "Yeah you're right."
+        "You leave the book on the floor, leaving it for the next unlucky person to stumble upon this abomination."
+hide fan with dissolve
+    
 
 
 
+# break this is where cutscene happen :D
+
+
+
+show dicohappy 
+Dico "Oh OH! I know where we should go next!! Serious-General!"
+You "Where's that?"
+Dico "Come on, we'll show you!"
+
+
+scene bg lads with dissolve 
+
+You "Where are we gonna go after this?"
+if gen1 == True:
+    Lay "We're going back to General 1 to so you can join a clan. I told ya you can join on when you're verified. "
+    You "Oh yeah, I forgot."
+else:
+   Lay "We are going to General 1 because I forgot to take you there."
+   You "Cool!"
+    
+Lay "Have I told you how cool and handsome cabbage is?"
+Lay "JK I HATE HIM HE STINKS!!!"
+        
 
 
 
