@@ -408,6 +408,10 @@ style main_menu_version:
     properties gui.text_properties("version")
 
 
+init python:
+    style.button.hover_sound = "Blip_select.wav"
+    style.button.activate_sound = "sound.wav"
+
 ## Game Menu screen ############################################################
 ##
 ## This lays out the basic common structure of a game menu screen. It's called

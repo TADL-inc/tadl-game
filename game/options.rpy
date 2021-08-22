@@ -215,3 +215,4 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 $ loc = Character(what_font="cour.ttf", callback=callback)
+

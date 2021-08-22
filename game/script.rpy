@@ -81,8 +81,19 @@ image lads = "bg lads.png"
 image movie = Movie(xpos=0, ypos=0, delay=11)
 image chap2 = "chap2.png"
 image fan = "wow.png"
-
-
+image nexnorm = "Nex1.png"
+image nexsmile = "Nex2.png"
+image nexangry = "Nex3.png"
+image nexmadtalk = "Nex4.png"
+image caryblush = "Caryblush.png"
+image carycry = "Carycry.png"
+image caryhappy = "Caryhappy.png"
+image carymad = "Carymad.png"
+image carynorm = "Carynorm.png"
+image carysans = "Carysans.png"
+image carysmile = "Carysmile.png"
+image carytalk = "Carytalk.png"
+image carytroll = "Carytroll.png"
 
 default gen1 = False
 default dpoints = False
@@ -853,7 +864,7 @@ menu:
     "Yes":
         $ fan = True
         You "I think we will be fine..."
-        "{color=#ACE599}Crin x Swep fanficting has been added to your inventory.{/color}"
+        "{color=#ACE599}Crin x Swep fanfiction has been added to your inventory.{/color}"
     "No":
         You "Yeah you're right."
         "You leave the book on the floor, leaving it for the next unlucky person to stumble upon this abomination."
@@ -884,6 +895,18 @@ else:
     
 Lay "Have I told you how cool and handsome cabbage is?"
 Lay "JK I HATE HIM HE STINKS!!!"
+You "So I got a question..."
+menu :
+    "What do you want to ask?"
+    "Choice 1":
+        You"What da dog doin?"
+    "Choice 2":
+        You"What's serious general about?"
+    "Choice 1":
+     "TEMP"
+    "Choice 2":
+        "TEMP"
+    
         
 
 

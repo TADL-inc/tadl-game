@@ -610,7 +610,7 @@ translate None strings:
     new "system cursor"
 
     # renpy/common/00preferences.rpy:484
-    old "music volume"
+    old " volume"
     new "music volume"
 
     # renpy/common/00preferences.rpy:485
