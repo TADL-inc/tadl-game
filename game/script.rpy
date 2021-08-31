@@ -891,8 +891,14 @@ if gen1 == True:
     You "Oh yeah, I forgot."
 else:
    Lay "We are going to General 1 because I forgot to take you there."
-   You "Cool!"
-    
+   Lay "I must tell ya, that place is the most unfunniest place here. "
+   You "Is it really that {color=#ACE599}bad?{/color}"
+   Dico " Yeah it really is."
+   You "Damn"
+   Lay "{color=#ACE599}And dont get me started on how petty the mafia is.{/color}"
+   "Wait wait wait, mafia?"  
+   You"what?"  
+   Dico "We will explain later..."
 Lay "Have I told you how cool and handsome cabbage is?"
 Lay "JK I HATE HIM HE STINKS!!!"
 You "So I got a question..."
