@@ -703,7 +703,7 @@ hide crinhappy
 show crinhuh
 Crin "Who the fuck is this??"
 show laysmile at right with easeinright
-Lay "This guy? He's new around here."
+Lay "This guy? they're new around here."
 hide crinhuh
 show crinnorm
 show laynormal at right
@@ -713,7 +713,7 @@ hide laysmile at right
 show layeyesclosed at right
 Lay "I'm gonna verify them to make them an official member."
 show crintalk
-Crin "Right then, bring him to the desk."
+Crin "Right then, bring them to the desk."
 hide crintalk
 hide layeyesclosed
 hide crinnorm
@@ -754,15 +754,10 @@ scene black
 "..."
 "What's happening?"
 
-"Sorry mate Crin is shit at programming the funny mini game so you get sent to chapter 2 lol!!"
+"Sorry mate Crin is shit at programming the funny mini game so you get sent to the chap 1 part 2lol!!"
 
-label chap2gen1:
 scene black with dissolve
 stop music fadeout 1.0
-
-show chap2 with dissolve
-with Pause(2)
-hide chap2 with dissolve
 
 scene bg polo with dissolve
 show laysmile with dissolve
@@ -856,6 +851,7 @@ Lay "Open it :troll:"
 with vpunch 
 "You immediately close the book in dread."
 You "My eyes."
+Lay "I-Im so fucking sorry."
 Dico "I think we should leave it here."
 Dico "Crin will get pretty {color=#ACE599}Angry{/color} if she sees you with that book."
 default fan = False
@@ -869,23 +865,10 @@ menu:
         You "Yeah you're right."
         "You leave the book on the floor, leaving it for the next unlucky person to stumble upon this abomination."
 hide fan with dissolve
-    
-
-
-
-# break this is where cutscene happen :D
-
-
-
-show dicohappy 
-Dico "Oh OH! I know where we should go next!! Serious-General!"
-You "Where's that?"
-Dico "Come on, we'll show you!"
-
 
 scene bg lads with dissolve 
 
-You "Where are we gonna go after this?"
+You "Where are we gonna go next??"
 if gen1 == True:
     Lay "We're going back to General 1 to so you can join a clan. I told ya you can join on when you're verified. "
     You "Oh yeah, I forgot."
@@ -899,22 +882,11 @@ else:
    "Wait wait wait, mafia?"  
    You"what?"  
    Dico "We will explain later..."
-Lay "Have I told you how cool and handsome cabbage is?"
-Lay "JK I HATE HIM HE STINKS!!!"
-You "So I got a question..."
-menu :
-    "What do you want to ask?"
-    "Choice 1":
-        You"What da dog doin?"
-    "Choice 2":
-        You"What's serious general about?"
-    "Choice 1":
-     "TEMP"
-    "Choice 2":
-        "TEMP"
-    
-        
 
+Lay ""
+show chap2 with dissolve
+with Pause(2)
+hide chap2 with dissolve
 
 
 
