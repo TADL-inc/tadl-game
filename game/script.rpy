@@ -781,7 +781,8 @@ Lay "Oh Yeah!!{color=#7D00FF} Dico{/color} is gonna be joining us. "
 if gen1 == False:
     You "Dico? Whose that?"
     Lay "He's a trial mod here."
-    You "OOh."
+    Lay "You were supposed to meet him back in general 1."
+    You "Ooh. I hope he's nice..."
 else:
     hide laytalk
 hide layeyesclosed
@@ -883,14 +884,43 @@ else:
    You"what?"  
    Dico "We will explain later..."
 
-Lay ""
+show black with dissolve
+"They all make it to starboard. The area you found yourself at in the beginning."
+
+play audio "damn.wav" volume 2.0
+""
+show laynormal with dissolve
+
+Lay "Wait Hold on Guys."
+Lay "I gotta get this."
+label chappy2fr:
+scene black with fade
 show chap2 with dissolve
 with Pause(2)
 hide chap2 with dissolve
 
+# AYO ITS THE ACTUAL FUCKING START OF TADL FINALLY OH MY FUCKING GOOOOOOOOOOOOOOOOOOOOOOOD. 
+$ renpy.movie_cutscene("lay.ogv")
+$ _skipping = False 
 
+scene bg starboard with dissolve
+"You see Lay with her phone in her hand looking frantically."
+"As if she was about to cry."
+show laycry with vpunch
+Lay "{size=-2}dad...{/size}"
+"You and Dico reach out for her."
+You "{size=+12}LAY! Lay are you ok?!{/size}"
+Dico "What happened??!"
 
-
+Lay "we gotta go. Ave needs us."
+scene black with dissolve
+play music "panic.wav" fadein 4.0
+"Lay wipes her tears and grabs you and Dico by the arm."
+"They then start bolting to to general 1 with you and dico closely behind her."
+You "WHY WE ARE RUNNING."
+You "WHATS GOING ON???"
+Lay "THERE'S NO FUCKING TIME TO EXPLAIN."
+Lay "WE GOTTA SHUT THE PLACE DOWN."
 
 
 
