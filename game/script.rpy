@@ -94,6 +94,8 @@ image carysans = "Carysans.png"
 image carysmile = "Carysmile.png"
 image carytalk = "Carytalk.png"
 image carytroll = "Carytroll.png"
+image crinfr = "crin_sprite.png"
+image bg pilk = "bg pilk.png"
 
 default gen1 = False
 default dpoints = False
@@ -218,7 +220,11 @@ python:
 if name == "rnexus" or name == "Rnexus":
     Lay "Lol stupid!!111"
 
+if name == "bleach" or name == "Bleach":
+    Lay "Super mega gay"
 
+if name == "MichealP" or name == "michealp":
+   Lay "Every Micheal P Scream (As of 07_10_16: https://www.youtube.com/watch?v=sglcHw5OK88"
 
 if name == "cary" or name == "Cary":
     Lay "wtf cary!?!?!?!?!???!!!!"
@@ -276,7 +282,8 @@ if name == "gaster" or name == "Gaster":
      Lay "=)"
      $ renpy.quit()
 
-
+if name == "pilk" or name == "Pilk":
+    jump pilk
 
 else:
 
@@ -330,8 +337,7 @@ Lay "It's the town's pride and joy. "
 show laynormal
 
 
-call screen flower
-with dissolve
+call screen flower with dissolve
 
 label funny:
 "What a funny looking sun."
@@ -647,6 +653,12 @@ show laytalk at right
 
 Lay "Oh this is [name]!"
 Crocidy "OH SHIT! Welcome!"
+if name == "Michealp" or name == "michealp":
+    show crochappy at left
+    Crocidy "HOLY SHIT!! MICHEAL P?"
+    Crocidy "THE GUY FROM Every Micheal P Scream (As of 07_10_16): https://www.youtube.com/watch?v=sglcHw5OK88"
+    Crocidy "YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+    hide crochappy
 show crocnormal at left
 Crocidy "Although currently the art depo is busy so we have limited visits today. Maybe come back later! :)"
 show layeyesclosed at right
@@ -758,6 +770,7 @@ scene black
 
 scene black with dissolve
 stop music fadeout 1.0
+play music "tman.mp3" fadein 1.0
 
 scene bg polo with dissolve
 show laysmile with dissolve
@@ -837,7 +850,7 @@ Lay "Wha?"
 
 You "She dropped something"
 hide laynormal
-"You, Dico and lay go to pick up what looks like a book of the ground."
+"You, Dico and Lay go to pick up what looks like a book of the ground."
 show fan 
 You "It looks like fanfiction."
 Lay "Open it :troll:"
@@ -886,7 +899,7 @@ else:
 
 show black with dissolve
 "They all make it to starboard. The area you found yourself at in the beginning."
-
+stop music fadeout 2.0
 play audio "damn.wav" volume 2.0
 ""
 show laynormal with dissolve
@@ -932,12 +945,34 @@ Lay "WE GOTTA SHUT THE PLACE DOWN."
 "Why's Lay crying? Is she ok?"
 "As you mind fill up with scared thoughts about your current situation, the sun stared down at you,"
 "Flashing its mocking smile at you."
-"'It definitely knows what's going on.' You think."
+"'It definitely knows what's going on.' You think.'"
+"'i just hope everyone is ok...'"
 
 
 
+show over with fade
+stop music
+play music "Shore Side.mp3"
+ 
+Crin "Hey!"
+Crin "We probably haven't met before. I'm Crin."
+Crin "I'm the lead dev of Tadl and I just wanted to quickly thank you for all this."
+Crin "I also want to thank: Cary for helping with the animated cutscenes, Adel for the Music and All the people who has help with the game till this point"
+Crin "I hope you enjoyed this mini update :)"
+Crin "I dont have much time to work on this any more but its always really fun when i have the chance too."
+Crin "Once again thank you for all of your suppport :)"
+Crin "Be sure to expect alot more updates around christmas time. "
+Crin "As I wont have school by then."
+Crin "Alright its time for me to go. :))"
+Crin "Goodbye!"
+return 
 
 
+label pilk:
+stop music 
+play music "milk.mp3"
+scene bg pilk with dissolve
+" "
 
 
 
@@ -1021,104 +1056,19 @@ Lay "WE GOTTA SHUT THE PLACE DOWN."
 
 
 
-label credits:
-scene black
-show dicosuitsmile
-Dico "Yo!"
 
-"Where am I?"
-hide dicosuitsmile
-show dicosuithap
-Dico "Well,"
-Dico "Welcome to the credits!"
-scene bg credit
-play music "Art_general.mp3"
-"Wait, I thought Average said Starboard?"
-show dicosuitbro
-Dico "You see:"
-Dico "Crin does not have enough time to finish the minigame right now."
-hide dicosuitbro
-show dicosuithap
-Dico "So, you're stuck here with me!"
-menu:
-    set menuset
-
-    "So what do you do here?":
-        Dico "Well, I'm here to read out the credits!"
-        Dico "So, let's get to it!"
-
-    "How do i leave?":
-        show dicosuitbro
-        Dico "Bro, just please the exit button on your window. Are you 5?"
-        Dico "Here I'll do it for ya."
-        $ renpy.quit()
-
-Dico "Alrighty, where do we start"
-Dico "Thanks to Alice and Crin for Coding and Compiling the game, you guys suck ass,"
-hide dicosuithap
-Crin "bro i will remove you from this game so quickly you wouldnt see me. suck ass"
-show dicosuitsmile
-Dico "Thanks to AcetoSpades, Crocidy, Julie, and… Dico for working on the music."
-hide dicosuitsmile
-show dicosuitbro
-Dico "Dico... what a dumbass fucking name"
-show dicosuitsmile
-hide dicosuitbro
-Dico "Thanks to FBI, Kyle, Crin"
-hide dicosuitsmile
-hide dicosuithap
-show dicosuitnerv
-Dico "(again)"
-hide dicosuitnerv
-show dicosuitbro
-Dico "nitro, stickmirror, Cary, Chalky, Em, Nero, nexus, Starry, and… Dico…"
-Dico "Again… for doing any art and visuals"
-Dico " I still hate that Dico guy who's stealing my name. "
-hide dicosuitbro
-show dicosuithap
-Dico "thanks to swep, alex, sour, and pretty much everyone else I just mentioned for contributing to the story. "
-show dicosuitbro
-Dico "Thanks to Bonk and Looking for… idk what did they do? They just have a role that says “Lad”, idk, thanks to them anyways."
-hide dicosuitbro
-hide dicosuithap
-Crin "Bro honestly dont know what they fucking do too. no hate tho tee hee"
-show dicosuitbro
-
-Dico " Thanks to robin and every other artist for all the fanart, like holy shit there is so much now, and most of it is of me, why?"
-hide dicosuithap
-Crin "Bro i made the game, wheres my fanart?? :dread:"
-show dicosuitsmile
-Dico "a special thank you to Average, you may be british but we think you’re still cool"
-hide dicosuitsmile
-Crin "a big thank you to the people who boosted the discord server first, sour, dezelden"
-Crin "Ay! No hate on my british fellow. Im british too."
-show dicosuithap
-Dico " and thanks to you, the player, for being here."
-show crinhappy at right with easeinright
-Crin "Yeah genuinely thank you so much for your support. This game has fucking improved my life to the point that no words could describe it. Thank you."
-hide crinhappy
-hide dicosuithap
-"{color=#ACE599} Sincerely, the TADL team.{/color}."
-
-
-scene black with fade
-stop music fadeout 2.0
-menu:
-    "main menu?":
-       "You still have alot of secrets to unveil..."
-       $ MainMenu(confirm=False)()
-
-    "quit?":
-        "It was fun while it lasted."
-        $ renpy.quit()
-
-
-
-
-
-
-
-
-
-
-return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
