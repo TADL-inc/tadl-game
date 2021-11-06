@@ -916,13 +916,23 @@ Lay "we gotta go. Ave needs us."
 scene black with dissolve
 play music "panic.wav" fadein 4.0
 "Lay wipes her tears and grabs you and Dico by the arm."
-"They then start bolting to to general 1 with you and dico closely behind her."
-You "WHY WE ARE RUNNING."
-You "WHATS GOING ON???"
+"They then start bolting to general 1 with you and dico closely behind her."
+You "WHY WE ARE RUNNING???"
+You "WHAT THE FUCK IS GOING ON???"
 Lay "THERE'S NO FUCKING TIME TO EXPLAIN."
 Lay "WE GOTTA SHUT THE PLACE DOWN."
 
-
+"As the three of you run frantically towards the capital, you can't help but be scared."
+"Your heart is racing."
+"It's hard to breath."
+"It is as if your whole body has switch on panic mode."
+"Your mind is filled to the brim of questions,"
+"Why are we running?"
+"What's happening in Gen 1?"
+"Why's Lay crying? Is she ok?"
+"As you mind fill up with scared thoughts about your current situation, the sun stared down at you,"
+"Flashing its mocking smile at you."
+"'It definitely knows what's going on.' You think."
 
 
 
