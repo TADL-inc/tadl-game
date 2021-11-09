@@ -949,7 +949,7 @@ Lay "WE GOTTA SHUT THE PLACE DOWN."
 "'i just hope everyone is ok...'"
 
 
-
+scene black
 show over with fade
 stop music
 play music "Shore Side.mp3"
