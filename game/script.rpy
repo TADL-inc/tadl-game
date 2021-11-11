@@ -927,7 +927,7 @@ Dico "What happened??!"
 
 Lay "we gotta go. Ave needs us."
 scene black with dissolve
-play music "panic.wav" fadein 4.0
+play music "panic.mp3" fadein 4.0
 "Lay wipes her tears and grabs you and Dico by the arm."
 "They then start bolting to general 1 with you and dico closely behind her."
 You "WHY WE ARE RUNNING???"
