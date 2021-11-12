@@ -303,7 +303,7 @@ screen navigation():
         if main_menu:
             textbutton _("New Game") action Start()
 
-            textbutton _("Continue") action QuickLoad()
+            textbutton _("Continue") action LoadMostRecent()
         else:
             textbutton _("History") action ShowMenu("history")
 
@@ -1522,3 +1522,15 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 600
+
+init +1 python:
+    class LoadMostRecent(Action):
+
+        def __init__(self):
+            self.slot = renpy.newest_slot()
+
+        def __call__(self):
+            renpy.load(self.slot)
+
+        def get_sensitive(self):
+            return self.slot is not None
