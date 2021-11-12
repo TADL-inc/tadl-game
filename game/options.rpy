@@ -207,7 +207,7 @@ init python:
 ## The username and project name associated with an itch.io project, separated
 ## by a slash.
 
-# define build.itch_project = "renpytom/test-project"
+define build.itch_project = "crindere-dev/tadl"
 init python:
     def callback(event, **kwargs):
         if event == "show":

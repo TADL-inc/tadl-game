@@ -166,6 +166,7 @@ return
 
 
 label start:
+    window show dissolve 
     $ trollars = 0
     $ items = []
     play music "EIETqr1JNJdu.128.mp3" fadein 2.0
