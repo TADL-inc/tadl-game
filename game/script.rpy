@@ -246,10 +246,10 @@ if name == "schloob":
     Lay "schloob"
 
 if name == "Kosma":
-    $ renpy.quit()
+
 
 if name == "Texas":
-    $ renpy.quit()
+
 
 
 if name == "Dream" or name == "dream" or name == "Dreamwastaken" or name == "dreamwastaken":
@@ -258,19 +258,19 @@ if name == "Dream" or name == "dream" or name == "Dreamwastaken" or name == "dre
        #except: pass
       $ _skipping = False
       $ renpy.movie_cutscene("dream_fight_HD.ogv")
-      $ renpy.quit()
+
 
 
 
 
 if name == "Gogy" or name == "gogy":
     Lay "Disgusting"
-    $ renpy.quit()
+
 
 
 if name == "CD" or name == "cd":
     Lay "Cracker balls"
-    $ renpy.quit()
+
 
 if name == "Cloud" or name == "cloud":
     Lay "I hate women."
@@ -281,7 +281,7 @@ if name == "Sour" or name == "sour":
 
 if name == "gaster" or name == "Gaster":
      Lay "=)"
-     $ renpy.quit()
+   
 
 if name == "pilk" or name == "Pilk":
     jump pilk
